@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Perfect Program - Oaklearning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+      <div class="landing-container">
+        <div class="landing-content">
+          <div class="logo-section">
+            <img
+              src="assets/oaklearning.png"
+              alt="Oaklearning"
+              class="logo-img"
+            />
+          </div>
+
+          <div class="mission-section">
+            <h2>Find the Perfect Program for Your Child</h2>
+            <p class="mission-text">
+              Our mission is to enable young learners to become competent and
+              confident students, hence, to unleash their full potential in
+              learning. We strive to help students form good learning habits and
+              strengthen their core academic skills. We also take pride in
+              inspiring students to explore further STEM areas through our
+              world-renowned robotic courses and camps.
+            </p>
+            <p class="mission-text">
+              Over the past years, we have helped hundreds of students achieve
+              their learning goals in a caring and supportive environment.
+            </p>
+          </div>
+
+          <div class="benefits-section">
+            <div class="benefit-card">
+              <div class="benefit-icon">🎯</div>
+              <h3>Personalized Matching</h3>
+              <p>
+                Get matched with the top 3 programs tailored to your child's
+                unique needs
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">📚</div>
+              <h3>Comprehensive Programs</h3>
+              <p>
+                From academics to robotics, coding, and personal development
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">✨</div>
+              <h3>Expert Guidance</h3>
+              <p>
+                Based on years of experience helping hundreds of students
+                succeed
+              </p>
+            </div>
+          </div>
+
+          <button id="start-btn" class="btn-primary">
+            Start Questionnaire
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questionnaire Form -->
+    <div id="questionnaire-page" class="page">
+      <div class="form-container">
+        <div class="form-header">
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <div class="step-indicator">
+            <span id="current-step">1</span> / <span id="total-steps">10</span>
+          </div>
+        </div>
+
+        <form id="questionnaire-form">
+          <!-- Section 1: Academic Background -->
+          <div class="form-section active" data-section="1">
+            <h2>Academic Background & Level Assessment</h2>
+            <p class="section-description">
+              Let's start by understanding your child's academic foundation
+            </p>
+
+            <div class="question-group">
+              <label for="age">How old is your child? *</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="3"
+                max="100"
+                required
+              />
+            </div>
+
+            <div class="question-group">
+              <label for="grade">What grade is your child in? *</label>
+              <select id="grade" name="grade" required>
+                <option value="">Select grade</option>
+                <option value="Pre-K">Pre-K</option>
+                <option value="K">Kindergarten</option>
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+                <option value="4">Grade 4</option>
+                <option value="5">Grade 5</option>
+                <option value="6">Grade 6</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+                <option value="11">Grade 11</option>
+                <option value="12">Grade 12</option>
+                <option value="Adult">Adult (18+)</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label for="average-grade"
+                >What is your child's average letter grade? *</label
+              >
+              <select id="average-grade" name="average-grade" required>
+                <option value="">Select grade</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D">D</option>
+                <option value="F">F</option>
+                <option value="N/A">N/A (Not applicable)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Section 2: Learning Profile -->
+          <div class="form-section" data-section="2">
+            <h2>Learning Profile & Interests</h2>
+            <p class="section-description">
+              Tell us about your child's learning preferences
+            </p>
+
+            <div class="question-group">
+              <label>What is your child's favourite subject? *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="favourite-subject"
+                    value="English"
+                    required
+                  />
+                  <span>English</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="favourite-subject"
+                    value="Math"
+                    required
+                  />
+                  <span>Math</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="favourite-subject"
+                    value="French"
+                    required
+                  />
+                  <span>French</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="favourite-subject"
+                    value="Science"
+                    required
+                  />
+                  <span>Science</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="favourite-subject"
+                    value="Computer Science"
+                    required
+                  />
+                  <span>Computer Science</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="question-group">
+              <label>What is your child's least favourite subject? *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="least-favourite-subject"
+                    value="English"
+                    required
+                  />
+                  <span>English</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="least-favourite-subject"
+                    value="Math"
+                    required
+                  />
+                  <span>Math</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="least-favourite-subject"
+                    value="French"
+                    required
+                  />
+                  <span>French</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="least-favourite-subject"
+                    value="Science"
+                    required
+                  />
+                  <span>Science</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="least-favourite-subject"
+                    value="Computer Science"
+                    required
+                  />
+                  <span>Computer Science</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="question-group">
+              <label>What is your child's biggest challenge? *</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="challenges"
+                    value="Paying attention"
+                  />
+                  <span>Paying attention</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="challenges" value="Reading" />
+                  <span>Reading</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="challenges" value="Writing" />
+                  <span>Writing</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="challenges"
+                    value="Public speaking"
+                  />
+                  <span>Public speaking</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="challenges"
+                    value="Organization"
+                  />
+                  <span>Organization</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="challenges"
+                    value="Problem-solving"
+                  />
+                  <span>Problem-solving</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="challenges" value="STEM" />
+                  <span>STEM</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="challenges" value="Confidence" />
+                  <span>Confidence</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="challenges" value="Motivation" />
+                  <span>Motivation</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="question-group">
+              <label>What academic hobbies does your child have? *</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Building robotics"
+                  />
+                  <span>Building robotics</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Academic contests"
+                  />
+                  <span>Academic contests</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="hobbies" value="Reading" />
+                  <span>Reading</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="hobbies" value="Writing" />
+                  <span>Writing</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="hobbies" value="Coding" />
+                  <span>Coding</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Problem-solving"
+                  />
+                  <span>Problem-solving</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Age-Based Developmental Questions (Dynamic) -->
+          <div class="form-section" data-section="3" id="developmental-section">
+            <h2>Developmental Skills Assessment</h2>
+            <p class="section-description">
+              Help us understand your child's current skill level
+            </p>
+            <div id="developmental-questions"></div>
+          </div>
+
+          <!-- Section 4: Location & Contact -->
+          <div class="form-section" data-section="4" id="location-section">
+            <h2>Location & Contact Information</h2>
+            <p class="section-description">Help us connect with you better</p>
+
+            <div class="question-group">
+              <label>Are you located in the Oakville area? *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="oakville-area"
+                    value="yes"
+                    required
+                    id="oakville-yes"
+                  />
+                  <span>Yes</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="oakville-area"
+                    value="no"
+                    required
+                    id="oakville-no"
+                  />
+                  <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="question-group" id="email-group" style="display: none">
+              <label for="email">Your email address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your.email@example.com"
+              />
+              <p class="field-hint">
+                We'll use this to send you program details and follow up with
+                you.
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="form-navigation">
+            <button
+              type="button"
+              id="prev-btn"
+              class="btn-secondary"
+              style="display: none"
+            >
+              Previous
+            </button>
+            <button type="button" id="next-btn" class="btn-primary">
+              Next
+            </button>
+            <button
+              type="submit"
+              id="submit-btn"
+              class="btn-primary"
+              style="display: none"
+            >
+              Get Recommendations
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" class="page">
+      <div class="results-container">
+        <div class="results-header">
+          <h1>Your Personalized Program Recommendations</h1>
+          <p class="results-subtitle">
+            Based on your responses, we've identified the top 3 programs best
+            suited for your child
+          </p>
+        </div>
+
+        <div id="loading-state" class="loading-state" style="display: none">
+          <div class="loading-spinner"></div>
+          <p>Sending your information...</p>
+        </div>
+
+        <div id="email-success" class="email-success" style="display: none">
+          <div class="success-icon">✅</div>
+          <h3>Email Sent Successfully!</h3>
+          <p>We've received your information and will be in touch soon.</p>
+        </div>
+
+        <div id="recommendations-container" class="recommendations-container">
+          <!-- Recommendations will be dynamically inserted here -->
+        </div>
+
+        <div class="results-footer">
+          <button id="restart-btn" class="btn-secondary">Start Over</button>
+          <a
+            href="tel:+12899491112"
+            id="contact-btn"
+            class="btn-primary contact-link"
+          >
+            📞 Call Us: (289) 949-1112
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- EmailJS SDK (optional - uncomment if using EmailJS) -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+    <!-- <script type="text/javascript">
+      (function() {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      })();
+    </script> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
