@@ -1,3 +1,45 @@
+# **Oaklearning Program Recommendation Form**
+
+## 🚀 Deployment
+
+This form can be easily deployed to Vercel:
+
+### Quick Deploy to Vercel
+
+1. **Push to GitHub** (if not already):
+
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin <your-github-repo-url>
+   git push -u origin main
+   ```
+
+2. **Deploy to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Sign up/Login with GitHub
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect it's a static site
+   - Click "Deploy"
+   - Done! Your form will be live in seconds
+
+### Manual Deploy via Vercel CLI
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# For production
+vercel --prod
+```
+
+---
+
 # **Parent Intake & Program Recommendation Framework**
 
 This framework outlines how to gather and interpret information about a child’s age, academic level, learning preferences, and interests to automatically recommend the **top 3 most suitable programs**.
